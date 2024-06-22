@@ -1,0 +1,2666 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .main {
+        width: 100%;
+        height: 5200px;
+        background-color: #ecf4fb;
+    }
+
+    .header {
+        width: 100%;
+        height: 40px;
+        background-color: black;
+    }
+
+    .color {
+        background-color: rgb(250, 138, 26);
+        height: 60px;
+    }
+
+    .header>.header__part {
+        width: 30%;
+        height: 40px;
+        /* background-color: red; */
+        margin-left: 1000px;
+        padding-top: 10px;
+    }
+
+
+    /* .info{
+        font-size: 20px;
+        margin-left:500px ;
+    } */
+
+    .header>.header__part>ul {
+        list-style-type: none;
+    }
+
+    .header>.header__part>ul>li {
+        margin-left: 25px;
+        float: left;
+    }
+
+    .header>.header__part>ul>li>a {
+        text-decoration: none;
+        text-align: left;
+        color: white;
+        font-size: smaller;
+        letter-spacing: 1px;
+    }
+    .header>.header__part>ul>li>a > img {
+        text-decoration: none;
+        text-align: left;
+        color: white;
+        font-size: smaller;
+        letter-spacing: 1px;
+        height: 25px;
+        width: 55px;
+}
+    
+
+    .search__container {
+        background-color: orange;
+        width: 100%;
+        height: 70px;
+    }
+
+    .search__image {
+        width: 20%;
+        /* background-color: pink; */
+        /* color: white; */
+        height: 70px;
+        float: left;
+        padding: 20px 80px;
+    }
+
+    .search__form {
+        width: 30%;
+        height: 70px;
+        /* background-color: red; */
+        float: left;
+        padding: 15px;
+    }
+
+    .search__form .n1 {
+        width: 370px;
+        height: 40px;
+        position: relative;
+        /* border-radius: 2; */
+        outline: none;
+        border: none;
+    }
+
+    .search__form .btn {
+        position: absolute;
+        width: 34px;
+        height: 38px;
+        border: none;
+        outline: none;
+        left: 653px;
+        background-color: white;
+        color: grey;
+
+    }
+
+    .login__container {
+        width: 35%;
+        height: 70px;
+        /* background-color: blue; */
+        float: left;
+        margin-left: 120px;
+    }
+
+    .login__container>ul {
+        list-style-type: none;
+    }
+
+    .login__container>ul>li {
+        float: left;
+        margin: 20px;
+    }
+
+    .login__container>ul>li>a {
+        text-decoration: none;
+        color: white;
+        font-size: 18px;
+    }
+
+    .section {
+        width: 80%;
+        height: 2230px;
+        /* background-color: rgb(186, 186, 34); */
+        padding-top: 20px;
+        margin: auto;
+        
+    }
+
+    .section__image {
+        width: 100%;
+        height: 350px;
+        /* background-color: red; */
+        margin: auto;
+    }
+    
+
+    .section__image>.slider {
+        width: 57%;
+        height: 300px;
+        float: left;
+        margin-left: 10px;
+        position: relative;
+        /* background-color: green; */
+    }
+    /* .slider i{
+        position: absolute;
+        top:0;
+        width: 50px;
+        height: 50px;
+        color: red;
+    } */
+
+    .section__image>.slider img {
+        width: 100%;
+        height: 300px;
+          position: absolute;
+        top: 0;
+        left: 0;
+    }
+    
+
+    
+
+    .scroll {
+        width: 40%;
+        height: 300px;
+        background-color: white;
+        padding-left: 10px;
+        margin-left: 10px;
+        float: left;
+    }
+
+    .scroll__container {
+        width: 95%;
+        height: 300px;
+        /* background-color: yellow; */
+        padding-left: 5px;
+
+    }
+
+    .scroll__heading {
+        width: 100%;
+        height: 50px;
+        border-bottom: 1px solid;
+        border-color: lightgrey;
+
+        /* background-color: red; */
+    }
+
+    .scroll__heading h2 {
+        font-size: 18px;
+        font-weight: 700;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+
+    .deal-lists-container {
+        width: 100%;
+        height: 200px;
+        float: left;
+    margin: 0 0 15px;
+    padding: 0;
+    overflow: hidden;
+    overflow-y: scroll;
+        /* background-color: green; */
+    }
+
+    .first__deal {
+        width: 100%;
+        height: 60px;
+        /* background-color: red; */
+        margin-top: 15px;
+    }
+
+    .img__container {
+        width: 20%;
+        height: 60px;
+        background-color: yellow;
+        float: left;
+        margin-left: 5px;
+    }
+
+    .img__container img {
+        width: 100%;
+        height: 60px;
+    }
+
+    .deal__price {
+        width: 52%;
+        height: 60px;
+        /* background-color: green; */
+        float: left;
+        margin-left: 10px;
+        color: #575757;
+    }
+
+    .list__price {
+        width: 100%;
+        height: 25px;
+        /* background-color: pink; */
+    }
+
+    .list__price del {
+        color: grey;
+    }
+
+    .list__price b {
+        color: black;
+    }
+
+    .viewing {
+        width: 20%;
+        height: 60px;
+        /* background-color: aqua; */
+        float: left;
+        margin-left: 5px;
+        text-align: center;
+
+    }
+
+    .viewing label {
+        font-weight: bold;
+        color: #f27935;
+        font-size: 18px;
+    }
+
+    .viewing span {
+        margin: -3px 0;
+        color: #666;
+        display: block;
+    }
+
+    .intro-tag-box {
+        width: 100%;
+        height: 50px;
+        /* background-color: red; */
+        text-align: center;
+        position: relative;
+    }
+
+    .overlay-border-simple {
+        width: 80%;
+        height: 2px;
+        background-color: #d5d5d5;
+        display: inline-block;
+        position: absolute;
+        top:510px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .intro-tag-box h1 {
+        color: #333;
+        font-size: 22px;
+        text-transform: capitalize;
+        font-weight: 600;
+        text-align: center;
+        width: 55%;
+        margin: 12px auto 30px;
+        border: 1px solid #d5d5d5;
+        padding: 10px 0;
+        border-radius: 6px;
+        /* z-index: 999999; */
+        background-color: #ecf4fb;
+        letter-spacing: .4px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .deal-of-day {
+        width: 100%;
+        height: 250px;
+        /* background-color: red; */
+        margin-top: 30px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .deal-of-day img {
+        vertical-align: bottom;
+        padding-right: 8px;
+        font-size: 24px;
+    }
+
+    .day1__deal {
+        width: 25%;
+        height: 200px;
+        /* background-color: grey; */
+        float: left;
+        /* margin-left: 5px; */
+
+    }
+
+    .day1-deal-container {
+        width: 100%;
+        height: 200px;
+        margin-top: 20px;
+        padding-left: 7px;
+        /* background-color: yellow; */
+    }
+
+    .day1__deal img {
+        width: 100%;
+        height: 200px;
+        border-radius: 20px;
+        
+        
+    }
+
+    .day1-deal-container .webstories {
+        width: 16.6%;
+        height: 200px;
+        padding-left: 8px;
+        position: relative;
+        /* filter: brightness(90%); */
+
+    }
+
+    .webstories-heading {
+        position: absolute;
+        bottom: 0px;
+        width: 80%;
+        margin: 0 10px 10px;
+        color: #fff;
+        z-index: 999;
+        overflow: hidden;
+    }
+
+    .webstories-heading:hover {
+        background-image: linear-gradient(366deg, #b9db22b8, transparent 80%);
+        bottom: 0px;
+    }
+
+    .nav__tabs {
+        width: 100%;
+        height: 40px;
+        /* background-color: green; */
+        border-bottom: 1px solid;
+        color: rgb(94, 85, 85);
+        margin-top: 50px;
+    }
+
+    .nav__tabs__container {
+        width: 80%;
+        height: 40%;
+        /* background-color: red; */
+        margin: auto;
+
+    }
+
+    .nav__tabs ul {
+        list-style-type: none;
+    }
+
+    .nav__tabs ul li {
+        float: left;
+    }
+
+    .nav__tabs ul li a {
+        text-decoration: none;
+        font-size: 16px;
+        color: rgb(59, 52, 52);
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 50px;
+        margin-top: 70px;
+        font-weight: 700;
+    }
+    .nav__tabs ul li  a .image__cashback{
+        text-decoration: none;
+        /* font-size: 16px; */
+        color: rgb(59, 52, 52);
+        font-family: Arial, Helvetica, sans-serif;
+        /* margin-left: 70px; */
+        /* margin-top: 70px; */
+        /* font-weight: 700; */
+        /* width: 40px; */
+        /* height: 40px; */
+        /* margin-left: 20px; */
+    }
+    .image__cashback{
+        width: 50px;
+        height: 40px;
+        margin-left: 50px;
+        /* height: 40px; */
+    }
+    
+
+    .hot_deals_container {
+        width: 100%;
+        height: 1030px;
+        margin-top: 30px;
+        /* background-color: red; */
+    }
+
+    .hot-deals-first {
+        width: 22%;
+        height: 320px;
+        /* background-color: pink; */
+        position: relative;
+        float: left;
+        margin-left: 27px;
+        margin-top: 10px;
+    }
+
+    .fkm__box1 {
+        width: 100%;
+        height: 320px;
+        background-color: white;
+        margin: auto;
+    }
+
+    .fkm__box1:hover {
+        box-shadow: 2px 2px 2px 2px rgb(80, 103, 109);
+
+
+    }
+
+    .fkm__box1 .tagline-cashback {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        z-index: 99;
+        cursor: pointer;
+        background: rgba(168, 100, 168, .1);
+        padding: 4px 10px;
+        border: 1px solid #9d3b9e;
+    }
+
+    .question-mark-img {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+        z-index: 99;
+        cursor: pointer;
+        background: 0 0 !important;
+    }
+
+    .tagline__container {
+        width: 100%;
+        height: 50px;
+        /* background-color: cyan; */
+    }
+
+    .img__box {
+
+        width: 70%;
+        height: 140px;
+        /* background-color: green; */
+        margin: auto;
+    }
+
+    .product-name {
+        border-bottom: 1px solid #ececec !important;
+        padding: 10px !important;
+    }
+
+    .fkm-main-vaaree {
+        width: 100%;
+        height: 30px;
+        padding-left: 10px;
+        /* background-color: red; */
+    }
+
+    .store-name-logo img {
+        width: 55px;
+        height: 16px;
+        margin-top: 10px;
+        float: left;
+    }
+
+    .clock__container {
+        float: left;
+        width: 18px;
+        height: 20px;
+        /* background-color: orange; */
+        margin-top: 10px;
+        margin-left: 80px;
+    }
+
+    .hour-ago {
+        width: 80px;
+        /* background-color: green; */
+        height: 20px;
+        float: right;
+        margin: 12px;
+   }
+    .one-hour-ago {
+        color: thistle;
+        font-size: 12px;
+    }
+    .rate__container {
+        width: 100%;
+        height: 60px;
+        /* background-color: orange; */
+    }
+    .cut-main-rate {
+        width: 30%;
+        height: 60px;
+        padding-left: 10px;
+        /* background-color: rgb(146, 146, 74); */
+    }
+
+    .cut__price {
+        color: grey;
+    }
+
+    .main__price {
+        color: #f27935;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .shop-now {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        z-index: 99;
+        cursor: pointer;
+        background: rgba(168, 100, 168, .1);
+        padding: 4px 10px;
+        border: 1px solid #e4a811;
+        color: #f27935;
+    }
+
+    .shop-now:hover {
+        background-color: rgb(247, 163, 8);
+        color: white;
+    }
+
+    .load-more {
+        width: 100%;
+        height: 100px;
+        /* background-color: cyan; */
+        clear: both;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .btn-load-more {
+        font-size: 15px;
+        width: 25%;
+        height: 42px;
+        border: none;
+        background-color: #f27935;
+        color: white;
+        border-radius: 3px;
+    }
+
+    .top-casbacks-stores {
+        width: 100%;
+        height: 530px;
+        background-color: #677988;
+        padding-top: 50px;
+
+    }
+
+    .top-cashbacks-container {
+        width: 80%;
+        height: 650px;
+        /* background-color: orange; */
+        margin: auto;
+    }
+
+    .top_stores {
+        background: url(images/topcashbacks_tores.png)no-repeat;
+        padding-left: 40px;
+        color: white;
+    }
+
+    .top-cashbacks-container a {
+        display: block;
+        float: right;
+        margin-top: -20px;
+        text-decoration: none;
+        color: white;
+        font-size: 16px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: 700;
+    }
+
+    .top-stores-container {
+        width: 100%;
+        height: 450px;
+        /* background-color: yellow; */
+        margin-top: 1px;
+    }
+
+    .must-deals-con {
+        width: 15%;
+        height: 105px;
+        background: #fff;
+        border-radius: 10px;
+        padding: 10px;
+        float: left;
+    text-align: center;
+    margin-left: 16.5px;
+    margin-top: 20px;;
+
+
+    }
+    .must-deals-con img{
+        margin-top: 10px;
+        display: inline;
+    width: 92px !important;
+    height: 30px !important;
+    }
+    .top-stores-container ul{
+        list-style-type: none;
+    }
+    .must-deals-con label{
+        width: 100%;
+    text-align: center;
+    float: left;
+    margin: 7px 0 10px;
+    font-weight: bold;
+    color: #ed145b;
+    font-size: 18px;
+    }
+    .must-deals-con label span{
+        margin: 0 0px 0 5px;
+    color: #666;
+    font-weight: 100;
+    text-align: center;
+    font-size: 18px;
+}
+.refer-friends{
+    width: 99%;
+    height: 400px;
+    /* background-color: pink; */
+    margin: auto;
+}
+.refer-friends h1{
+    text-align: center;
+    padding-top: 20px;
+}
+.refer-friends img{
+    padding-top: 20px;
+    width: 100%;
+    height: 350px;
+    border: blue;
+
+}
+.topcashback__deals{
+    margin-top: 30px;
+    width: 18%;
+    height: 280px;
+    background-color:white;
+    border:1px  solid darkblue;
+    border-radius: 5px; 
+    text-align: center;
+    font-weight: 700;
+    float:left;
+    margin-left: 15px;
+
+}
+.topcashback__deals img{
+    padding: 16px;
+    width: auto;
+}
+.topcashback__deals label{
+    color:#ed145b;
+
+}
+ .cash__back{
+    font-size: 14px;
+    color:#333;
+    font-weight: lighter;
+    margin-top: 10px;
+    padding-left: 10px;
+ } 
+ .trending-coupon-wrapper{
+    width: 100%;
+    height: 500px;
+    /* background-color: pink; */
+    clear: both;
+    padding-top:20px;
+ }  
+ .trending__coupons{
+    width: 100%;
+    height: 80px;
+    /* background-color: red; */
+ }
+ .trending__coupons h1{
+    font-weight: lighter;
+ }
+ .coupons_container{
+    width: 100%;
+    height: 320px;
+    /* background-color: yellow; */
+ }
+ .Coupon-first{
+    width: 18%;
+    height: 320px;
+    background-color: white;
+    border-radius: 3px;
+    float: left;
+    margin-left: 20px;
+    box-shadow: 0 2px 7px 0 rgb(154, 150, 150);
+ }
+ .coupon-top-part{
+    width: 100%;
+    height:50%;
+    border-radius: 5px;
+    position: relative;
+    /* background-color: red; */
+    border-bottom: 1px dashed ;
+ }
+ .coupon-top-part:after {
+    content: ' ';
+    background: #f0f3f6;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    right: -16px;
+    top: 140px;
+    /* z-index: 999; */
+}
+.coupon-top-part::before {
+    content: ' ';
+    background: #eef1f4;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    position: absolute;
+    left: -12px;
+    top: 140px;
+    /* z-index: 999; */
+}
+
+
+
+
+ .coupon-top-part img{
+    width: 62px;
+    height: 27px;
+    margin-top: 20px;
+    transform: translateX(150%);
+ }
+ .coupon-top-part span{
+    border: 1px solid #ccc;
+    color: #333;
+    padding: 7px 25px 8px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin: 15px 0 ;
+    position: relative;
+    font-weight: 700;
+    top:50px;
+    margin-left: 10px;
+    
+ }
+ .coupon-bottom-part{
+    width: 100%;
+    height:50%;
+    /* background-color: rgb(192, 98, 98); */
+ }
+.coupon-bottom-part h3{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 22px;
+}
+.coupon-bottom-part p{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.show-coupons-button{
+    width: 70%;
+    height: 40px;
+    /* background-color: rgb(51, 51, 41); */
+    margin-left: 56px;
+}
+.show-coupons {
+        background: rgba(168, 100, 168, .1);
+        padding: 6px 10px;
+        border: 1px solid #e4a811;
+        color: #f27935;
+        font-weight: 700;
+    border-radius: 2px;
+    }
+
+    .show-coupons:hover {
+        background-color: rgb(247, 163, 8);
+        color: white;
+        transition: 1s;
+    }
+    .featured-category-container{
+        width: 100%;
+        height: 500px;
+        /* background-color: mediumseagreen; */
+
+    }
+    .featured-category-heading{
+        margin-top: 150px;
+        width: 100%;
+        height: 50px;
+        /* background-color: red; */
+
+    }
+    .featured-category-heading h1{
+        font-weight: lighter;
+        font-size: 28px;
+    }
+    .featured-img{
+        margin-left: 20px;
+    }
+    .featured-images-container{
+        width: 100%;
+        height: 300px;
+        /* background-color: orange; */
+    }
+    .images-featured{
+        width: 16.2%;
+        height: 130px;
+        background-color:white;
+        border-radius: 5px;
+        border: 1px solid black;
+        float: left;
+        margin-left: 5px;
+        margin-top: 10px;
+    }
+    .images-featured p{
+        text-align: center;
+    }
+     ul{
+        list-style-type: none;
+    }
+   
+    .featured__lists img{
+        width: 60px;
+        height: 60px;
+        margin-left: 70px;
+        margin-top: 20px;
+    }
+  
+    .images-featured:hover{
+        box-shadow: 0 2px 23px 0 rgba(0,0,0,.2);
+    }
+    .news-articles-wrapper{
+        width: 100%;
+        height: 300px;
+        /* background-color: green; */
+    }
+    .first-zomato-gold{
+        width: 18%;
+        height: 250px;
+        background-color: white;        
+        float: left;
+        box-shadow: rgb(33, 43, 45);
+        margin-left: 20px;
+    }
+    .first-zomato-gold img{
+        width: 100%;
+        height: 140px;
+    }
+    .gold-image-content{
+        margin: auto;
+        width: 95%;
+        height: 100px;
+        /* background-color: pink; */
+    }
+    .gold-image-content h3{
+    color: #333;
+    line-height: 19px;
+    font-size: 16px;
+    font-weight: 600;
+}
+.gold-time{
+    /* background-color: lightcoral; */
+    width: 70px;
+    height: 20px;
+    margin-top: 24px;
+    float: left;
+    color:rgb(126, 112, 112);
+    font-size: 12px;
+}
+.gold-read-more{
+    color: red;
+    width: 80px;
+    height: 20px;
+    float: right;
+    margin-top: 20px;
+    /* background-color: lightgreen; */
+}
+.big__image{
+    width: 100%;
+    height: 100px;
+    /* background-color: red; */
+}
+.footer__wrapper{
+    width: 100%;
+    height: 725px;
+    background-color: #f27935;
+    clear: both;
+    float: left;
+    /* top:100px;
+    left:100px;*/
+    position: relative;
+    z-index: 0; 
+
+}
+.subscribe{
+    width: 80%;
+    height: 140px;
+    background-color:white;
+    margin: auto;
+    top:-75px;
+    left:145px;
+    position: absolute;
+    z-index: -1;
+}
+.subscribe-content{
+    width: 33.33%;
+    float: left;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.subscribe-content h2{
+
+margin: 0 15px;
+    padding: 0;
+    color: #f27935;
+    font-size: 39px;
+    font-weight: 700;
+}
+.subscribe-content h3{
+font-weight: 400;
+    font-size: 12px;
+    color: #666;
+    margin: 5px 0 0 16px;
+}
+.form-wrap{
+    padding-left: 15px;
+    padding-right: 15px;
+    position: relative;
+    float: left;
+    width: 40%;
+    margin-top: 20px;
+    margin-left: 60px;
+}
+.form-wrap input{
+    width: 45% !important;
+    float: left;
+    outline: 0;
+    padding: 9px 0;
+    border: 0;
+    border-bottom: 0px #ececec;
+    font-size: 16px;
+    margin: 2px 11px 0 0;
+}
+.form-wrap span{
+    position: absolute;
+    width: 90px;
+    height: 1px;
+    left: 16px;
+    background: #f27935;
+    top: 39px;
+}
+.form-wrap .btn{
+    /* border: none; */
+    background: #f27935;
+    padding: 10px 35px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 3px;
+}
+.subscribe-content-small{
+    padding-left: 15px;
+    padding-right: 15px;
+    float: left;
+    width: 100%;
+}
+.subscribe-content-small p{
+    margin-top:20px;
+    width: 819px;
+    color: #666;
+    font-size: 14px;
+    margin-left: 20px;
+}
+
+.ranking{
+    width: 80%;
+    height: 150px;
+    background-color:#f98d4f;
+    margin: auto;
+    top:100px;
+    left:150px;
+    position: absolute;
+    z-index: -2;
+    /* box-shadow: 1px 1px  rgb(39, 39, 43); */
+}
+.ranking ul li{
+    float: left;
+    width: 20%;
+    list-style-type: none;
+    text-align: center;
+    padding: 0 29px;
+}
+.ranking ul li p{
+    text-align: center;
+}
+.ranking ul li label{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    position: relative;
+    display:inline-block;
+}
+.ranking ul li span{
+    color: white;
+    font-size: 16px;
+}
+
+.about__footer {
+        width: 90%;
+        height: 40px;
+        /* background-color: green; */
+        border-bottom: 1px solid;
+        margin: auto;
+        color:white;
+        margin-top: 280px;
+        clear:both;
+    }
+
+    .footer__container {
+        width: 100%;
+        height: 500px;
+        /* background-color: red; */
+        margin-left: -5;
+        position: relative;
+    }
+    .footer-listing-wrapper{
+        margin-top: 50px;
+        width: 100%;
+        height: 420px;
+        /* background-color: #333; */
+        clear: both;
+    }
+
+    .about__footer ul {
+        list-style-type: none;
+
+    }
+
+    .about__footer ul li {
+        float: left;
+        margin-top: 8px;
+        padding-left: 1px;
+    }
+   
+
+    .about__footer ul li a {
+        text-decoration: none;
+        font-size: 16px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left: 80px;
+        margin-top: 1px;
+        font-weight: 700;
+    }
+    .first-part-footer{
+        width: 16%;
+        height: 390px;
+        /* clear:both; */
+        float: left;
+
+        /* padding-top: 50px; */
+        /* padding-left: 30px; */
+        margin-top: 20px;
+        margin-left: 5px;
+        /* background-color: rgb(107, 137, 107); */
+        
+    }
+    .first-part-footer ul{
+
+        list-style-type: none;
+        list-style-type: none;
+
+        /* padding: 0 0 0 22px ; */
+        /* margin-top: 10px; */
+    }
+    .first-part-footer ul li a{
+    /* padding: 3px 0; */
+    width: 65%;
+    font-weight: 500;
+    font-size: 14px;
+    float: left;
+
+    }
+    .follow-us-container{
+        /* background-color:#e4a811; */
+        width: 33%;
+        height: 370px;
+        float: left;
+        border-left: 1px solid rgba(255, 255, 255, .35);
+        padding: 10px 0 0 39px;
+        color: #fff;
+        margin: 25px 0 0;
+        border-left: 1px solid white;
+        position: absolute;
+        top:35px;
+        right: 60px;
+        
+
+}
+    .or {
+    font-size: 18px;
+    font-weight: 600;
+    margin-left: 20px;
+    display: inline-block;
+}
+.form{
+float: right;
+    width: 50%;
+    text-align: right;
+    position: relative;
+}
+.form input{
+    background-color: #f6a172;
+    border: none;
+    padding: 10px;
+    outline: 0;
+    color:white;
+    border-radius: 7px;
+    letter-spacing: .5px;
+}
+.form button{
+    /* background: url(images/arrow.png) no repeat; */
+    border: none;
+    padding: 8px;
+    outline: 0;
+    border-radius: 7px;
+    background-color: #f6a172;
+    margin: 1px 0 0;
+    position: absolute;
+    right: 4px;
+}
+.icons{
+    width: 100%;
+    height: 60px;
+    /* background-color: pink; */
+    
+}
+input::placeholder{
+    color:white;
+}
+.google-image{
+    width: 100%;
+    height: 60px;
+    /* background-color: green; */
+    border-bottom: 1px solid rgb(245, 240, 240);
+    margin-bottom: 20px;
+    
+}
+.follow-us-container label{
+    font-size: 20px;
+    font-weight: 700;
+}
+.icons ul li a{
+    margin-left: 10px;
+    
+    
+}
+.scanner{
+    margin-top: 10px;
+    width: 180px;
+    height: 170px;
+}
+    
+    .why-waste-money{
+        width: 100%;
+        height:3830px;
+        background-color: #333;
+        /* clear: both; */
+    }
+    .waste-money-heading{
+        width: 80%;
+        height: 600px;
+        /* background-color: yellow; */
+        margin-left:250px;
+    }
+    .waste__head{
+        width: 100%;
+        height: 100px;
+        /* background-color: red; */
+        color:white;
+        font-size: 28px;
+        font-weight: 900;
+    }
+    .waste__head label{
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+    font-size: 20px;
+    }
+    .all__content{
+        width: 100%;
+        height: 600px;
+        /* background-color: yellow; */      
+    }
+    .all__content h2{
+        font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 25px;
+    }
+    .all__content p{
+        font-size: 16px;
+    color: #fff;
+    text-align: justify;
+    margin-bottom: 20px;
+    }
+    .all__content h3{
+        font-size: 18px;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 25px;
+    }
+    .copyright__container{
+        background: rgba(255, 255, 255, .23);
+    border-radius: 3px;
+    line-height: 1.42857143;
+    color: #333;
+    position: relative;
+    width: 100%;
+    /* margin: auto; */
+    height: 140px;
+    top: 3580px;
+    }
+
+    .copyright__container p{
+        /* font-size: 14px; */
+        /* margin: 0 0 10px; */
+        position: absolute;
+        color:white;
+        padding-left: 50px;
+    }
+    .copyright__container .text-center{
+        color: hsla(0, 37%, 93%, 0.6);
+    font-size: 14px;
+    position: absolute;
+    bottom: 10px;
+    padding-left: 500px;
+    }
+    
+    
+
+    
+
+    
+   
+
+</style>
+
+<body>
+    <div class="main">
+        <div class="header">
+            <div class="header__part">
+               
+                <ul>
+                    <li><a href="#"><img src="images/new-cashabck.gif"></a></li>
+                    <li><a href="#">Advertise with Us</a></li>
+                    <li><a href="#"> <i class="fa-solid fa-hand-holding-heart"></i>
+                            100% Cashback</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="search__container">
+            <div class="search__image">
+                <img src="images/freekaamaalimage.png" alt="">
+
+            </div>
+            <div class="search__form">
+                <form action="">
+                    <input class="n1" type="text" placeholder="What are you looking for?">
+                    <button class="btn">
+                        <i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+            <div class="login__container">
+                <ul>
+                    <li><a href="#"><i class="fa-solid fa-house"></i> Top Categories</a></li>
+                    <li><a href="#"><i class="fa-solid fa-arrow-down"></i> Top Coupons</a></li>
+                    <li><a href="#"><i class="fa-solid fa-user-plus"></i> Login/Signup</a></li>
+                </ul>
+
+            </div>
+        </div>
+        <div class="section">
+            <div class="section__image">
+                <div class="slider">
+                    <!-- <i class="fa-fa-arrow"></i> -->
+                    <img src="images/65c1e36a431af_cccccccccccpng.webp" alt="">
+                    <img src="images/actress.webp">
+                </div>
+                
+                <div class="scroll">
+                    <div class="scroll__container">
+                        <div class="scroll__heading">
+                            <h2>Live Deals</h2>
+                        </div>
+                        <div class="deal-lists-container">
+
+                            <div class="first__deal">
+                                <div class="img__container">
+                                    <img src="images/deal1.png">
+                                </div>
+                                <div class="deal__price">
+                                    @Re.1** Premium Products in Just Few Steps !! (Details Inside)
+                                    <div class="list__price"> <del> ₹ 599</del>
+                                        <b>₹ 1 </b>
+
+                                    </div>
+                                </div>
+
+                                <div class="viewing">
+                                    <label>26</label>
+                                    <span>Viewing</span>
+                                </div>
+                            </div>
+
+                            <div class="first__deal">
+                                <div class="img__container">
+                                    <img src="images/peanut.png">
+                                </div>
+                                <div class="deal__price">
+                                    Purchase Peanuts & Get 100% Cashback + No Shipping 
+                                    <div class="list__price"> <del> ₹ 20</del>
+                                        <b>₹ 0 </b>
+
+                                    </div>
+                                </div>
+
+                                <div class="viewing">
+                                    <label>12</label>
+                                    <span>Viewing</span>
+                                </div>
+                            </div>
+
+                            <div class="first__deal">
+                                <div class="img__container">
+                                    <img src="images/deal2.png">
+                                </div>
+                                <div class="deal__price">
+                                    Choose your FREE Gift On Swiggy Orders.
+                                    <div class="list__price"> <del> ₹ 150</del>
+                                        <b>₹ 0 </b>
+                                    </div>
+                                </div>
+                                <div class="viewing">
+                                    <label>13</label>
+                                    <span>Viewing</span>
+                                </div>
+                            </div>
+
+                            <div class="first__deal">
+                                <div class="img__container">
+                                    <img src="images/deal3.png">
+                                </div>
+                                <div class="deal__price">
+                                    @Re.1** Premium Products in Just Few Steps !! (Details Inside)
+                                    <div class="list__price"> <del> ₹ 1999</del>
+                                        <b>₹ 368 </b>
+                                    </div>
+                                </div>
+                                <div class="viewing">
+                                    <label>17</label>
+                                    <span>Viewing</span>
+                                </div>
+                            </div>
+
+
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <span class="overlay-border-simple"></span>
+
+            <div class="intro-tag-box">
+                <h1>Best Online Deals, Free Stuff and Top Cashback Offers</h1>
+            </div>
+
+            <div class="deal-of-day">
+                <h2> <img src="images/rupay image.png" alt="">
+                    Deal Of The Day</h2>
+
+                <div class="day1-deal-container">
+                    <div class="day1__deal">
+                        <img src="images/day1_deal.webp">
+                    </div>
+                    <div class="day1__deal">
+                        <img src="images/day2__deal.webp">
+                    </div>
+                    <div class="day1__deal">
+                        <img src="images/day3__deal.webp">
+                    </div>
+                    <div class="day1__deal">
+                        <img src="images/day4__deal.webp">
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="deal-of-day">
+                <h2> <img src="images/rupay image.png" alt="">
+                    Webstories</h2>
+
+                <div class="day1-deal-container">
+                    <div class="day1__deal webstories">
+                        <img src="images/webstories1.webp">
+                        <p class="webstories-heading">FREE Alternatives Of Chat GPT</p>
+                    </div>
+                    <div class="day1__deal webstories">
+                        <img src="images/webstories2.webp">
+                        <p class="webstories-heading">Top Ongoing Sales Of Top Brands</p>
+                    </div>
+                    <div class="day1__deal webstories">
+                        <img src="images/webstories3.webp">
+                        <p class="webstories-heading">Ye Offers - Loote Ya Nhi ??</p>
+                    </div>
+                    <div class="day1__deal webstories">
+                        <img src="images/webstories4.webp">
+                        <p class="webstories-heading">Top Rated Payment Apps !!</p>
+                    </div>
+                    <div class="day1__deal webstories">
+                        <img src="images/webstories5.webp">
+                        <p class="webstories-heading">Most Useful Products Under Rs.100 !!</p>
+                    </div>
+                    <div class="day1__deal webstories">
+                        <p class="webstories-heading">Khaana Khazana: Best Treat 4 U !!</p>
+                        <img src="images/webstories6.webp">
+                    </div>
+                </div>
+            </div>
+
+            <div class="nav__tabs">
+                <div class="nav__tabs__container">
+                    <ul>
+                        <li><a href="#">HOT DEALS</a></li>
+                <li><a href=#><img  class="image__cashback" src="images/new-cashabck.gif"></a></li>
+
+                <li><a href="#"> 100% CASHBACK</a></li>
+                        <li><a href="#">TREANDING DEALS</a></li>
+                        <li><a href="#">COUPONS</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+            <div class="hot_deals_container">
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Cashback</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/varee.png" alt=""></p>
+                        <p class="product-name">LIVE AGAIN - Flat 40% FKM CB [NO AOV] + Rs.500 Coupon OFF !!</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/vareeimg.png" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">1 hour ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 2000
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹ 900 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Shop Now</span>
+
+
+                    </div>
+                </div>
+
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Sponsored</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/girl.png" alt=""></p>
+                        <p class="product-name">Cotton Top at Rs.99 (Worth Rs.799) + Free Shipping !!</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/jiomart.jpg" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">1 hour ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 799
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹ 99 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Read More</span>
+
+
+                    </div>
+                </div>
+
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Cashback</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/unbreakable.png" alt=""></p>
+                        <p class="product-name">Unbreakable Water Bottle at Rs.149 + Free Shipping !!</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/bigbasket.jpg" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">30 hour ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 216
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹ 149 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Shop Now</span>
+
+
+                    </div>
+                </div>
+
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Sponsored</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/shirts.png" alt=""></p>
+                        <p class="product-name">Casual Shirts Starts Rs.269 + Flat Rs.150 Cashback</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/myntra.jpg" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">49 mins ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 999
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹ 849 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Read More</span>
+
+
+                    </div>
+                </div>
+
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Sponsored</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/lamp.png" alt=""></p>
+                        <p class="product-name">Electronic Mosquito Killer Lamp at Rs.219 + Free Shipping !!</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/amazon.jpg" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">15 mins ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 449
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹ 219 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Read More</span>
+
+
+                    </div>
+                </div>
+
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Sponsored</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/bowls.png" alt=""></p>
+                        <p class="product-name">Serving Bowls Set Of 6 At Rs.51 Each ( Stainless Steel ).</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/peperfry.jpg" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">2 hours ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 710
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹ 308 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Shop Now</span>
+
+
+                    </div>
+                </div>
+
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Cashback</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/snacks.png" alt=""></p>
+                        <p class="product-name">Price Drop - Beyond Snack Banana Chips (90g x 4) At Rs.27 Each</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/swiggy.jpg" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">49 mins ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 300
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹108 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Read More</span>
+
+
+                    </div>
+                </div>
+
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Sponsored</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/icecream.png" alt=""></p>
+                        <p class="product-name">Order From NIC Ice Creams At Flat 60% Off + Extra FKM CB !!</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/amazon.jpg" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">1 hour ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 500
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹ 200 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Shop Now</span>
+
+
+                    </div>
+                </div>
+
+
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Sponsored</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/cactus.png" alt=""></p>
+                        <p class="product-name">Dancing Repeating Cactus At Just Rs.292 + FREE Shipping</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/fkaamaal.jpg" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">1 hour ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 500
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹ 200 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Shop Now</span>
+
+
+                    </div>
+                </div>
+
+
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Cashback</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/dryfruits.png" alt=""></p>
+                        <p class="product-name">Mixed Dry Fruits Worth Rs.1000 At Rs.379.</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/caffeine.jpg" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">1 hour ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 1000
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹ 379 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Read More</span>
+
+
+                    </div>
+                </div>
+
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Sponsored</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/body serum.png" alt=""></p>
+                        <p class="product-name">Buy 1 Get 1 FREE - Hydrating Body Serum + FREE Gifts Worth Rs.298</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/amazon.jpg" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">1 hour ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 547
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹ 166 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Shop Now</span>
+
+
+                    </div>
+                </div>
+
+                <div class="hot-deals-first">
+                    <div class="fkm__box1">
+
+                        <div class="tagline__container">
+                            <span class="tagline-cashback">Cashback</span>
+                            <span class="question-mark-img"><img src="images/question-cashback.png"></span>
+                        </div>
+                        <p class="img__box"><img src="images/smartphone.png" alt=""></p>
+                        <p class="product-name">Buy 1 Get 1 FREE - Hydrating Body Serum + FREE Gifts Worth Rs.298</p>
+                        <div class="fkm-main-vaaree">
+                            <p class="store-name-logo"><img src="images/amazon.jpg" alt=""></p>
+
+                            <div class="clock__container">
+                                <img src="images/timeago.png" alt="">
+                            </div>
+                            <div class="hour-ago">
+                                <p class="one-hour-ago">2 hour ago</p>
+                            </div>
+                        </div>
+                        <div class="rate__container">
+                            <div class="cut-main-rate">
+                                <p class="cut__price">
+                                    <del>
+                                        ₹ 9999
+                                    </del>
+                                </p>
+                                <p class="main__price">
+                                    ₹ 0 </p>
+                            </div>
+                        </div>
+                        <span class="shop-now">Read More</span>
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="load-more">
+                <input type="button" class="btn-load-more" value="LOAD MORE">
+            </div>
+        </div>
+        <div class="top-casbacks-stores">
+            <div class="top-cashbacks-container">
+                <h2 class="top_stores ">Top Cashback Stores</h2>
+                <a href="#">View All</a>
+
+                <div class="top-stores-container">
+                    <ul class="top-stores-list">
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/swiggystore.jpg" alt="">
+                                <label><i>₹</i> 15 <span>Cashback</span></label></div>
+                        </li>
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/shyawa.jpg" alt="">
+                                <label><i>₹</i> 400 <span>Cashback</span></label></div>
+                        </li>
+
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/nykaa.jpg" alt="">
+                                <label><i>₹</i> 7 <span>Cashback</span></label></div>
+                        </li>
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/caffeine1.jpg" alt="">
+                                <label><i>₹</i> 90 <span>Cashback</span></label></div>
+                        </li>
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/fossil.jpg" alt="">
+                                <label><i>₹</i> 20 <span>Cashback</span></label></div>
+                        </li>
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/reebok.jpg" alt="">
+                                <label><i>₹</i> 17 <span>Cashback</span></label></div>
+                        </li>
+
+
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/benetlon.jpg" alt="">
+                                <label><i>₹</i> 25 <span>Cashback</span></label></div>
+                        </li>
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/nilkamal.jpg" alt="">
+                                <label><i>₹</i> 12 <span>Cashback</span></label></div>
+                        </li>
+
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/pink.jpg" alt="">
+                                <label><i>₹</i> 13 <span>Cashback</span></label></div>
+                        </li>
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/trident.jpg" alt="">
+                                <label><i>₹</i> 17 <span>Cashback</span></label></div>
+                        </li>
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/bummer.jpg" alt="">
+                                <label><i>₹</i> 15 <span>Cashback</span></label></div>
+                        </li>
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/beauty.jpg" alt="">
+                                <label><i>₹</i> 30 <span>Cashback</span></label></div>
+                        </li>
+
+
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/earth.jpg" alt="">
+                                <label><i>₹</i> 62 <span>Cashback</span></label></div>
+                        </li>
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/dabur.jpg" alt="">
+                                <label><i>₹</i> 18 <span>Cashback</span></label></div>
+                        </li>
+
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/ageasy.jpg" alt="">
+                                <label><i>₹</i> 45 <span>Cashback</span></label></div>
+                        </li>
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/asaya.jpg" alt="">
+                                <label><i>₹</i> 80 <span>Cashback</span></label></div>
+                        </li>
+                        <li>
+                            <div class="must-deals-con">
+                                <img src="images/symtten.jpg" alt="">
+                                <label><i>₹</i> 50 <span>Cashback</span></label></div>
+                        </li>                 
+                    </ul>
+                </div>
+           
+
+           <div class="refer-friends">
+            <h1>Refer Friends & Earn Lifetime</h1>
+            <img src="images/referfriends.jpg" alt="">
+           </div>
+
+
+
+           <div class="deal-of-day">
+            <h2> <img src="images/rupay image.png" alt="">
+                Top Cashback Deals</h2>
+
+                <div class="top-stores-container ">
+                    <ul class="top-stores-list ">
+                        <li>
+                            <div class="topcashback__deals">
+                                <img src="images/men_tshirt.png" alt="">
+                                <label> 6.48 ₹ Cashback</label>
+                                <p class="cash__back">Selling Fast - Men's T-Shirt (Pack Of 5) At Just Rs.59 Each</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="topcashback__deals">
+                                <img src="images/flat.jpg" alt="">
+                                <label> 250 ₹ Cashback</label>
+                                <p class="cash__back">On Demand - Flat 25% Off + Up to Rs.250 FKM Cashback !!</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="topcashback__deals">
+                                <img src="images/products.png" alt="">
+                                <label> 150 ₹ Cashback</label>
+                                <p class="cash__back">Ponds Products At Min 50% Off + Flat Rs.150 FKM Cashback</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="topcashback__deals">
+                                <img src="images/icecream.png" alt="">
+                                <label> 15.00 ₹ Cashback</label>
+                                <p class="cash__back">Order From NIC Ice Creams At Flat 60% Off + Extra FKM CB !!</p>
+                            </div>
+                        </li>
+
+                        <li>
+                            <div class="topcashback__deals">
+                                <img src="images/earbuds.png" alt="">
+                                <label> 6.48 ₹ Cashback</label>
+                                <p class="cash__back">Lowest Price - Earbuds From Just Rs.799 + FKM Rewards
+                                </p>
+                            </div>
+                        </li>
+                        
+               </ul>  
+        </div>
+
+                </div>
+                
+                <div class="trending-coupon-wrapper">
+                    <div class="trending__coupons">
+                        <h1>Trending Coupons</h1>
+                    </div>
+
+                    <div class="coupons_container">
+                        <div class="Coupon-first">
+                            <div class="coupon-top-part">
+                                <img src="images/vareeimg.png" alt="">
+                                <span> ****10 </span>
+                            </div>
+                            <div class="coupon-bottom-part">
+                                <h3>10% Off</h3>
+                                <p>Additional 10% Off On Orders Above Rs.1999</p>
+                            <div class="show-coupons-button">
+                                <span class="show-coupons">Show Coupons</span>
+                            </div>
+                            </div>
+
+                        </div>
+                        <div class="Coupon-first">
+                            <div class="coupon-top-part">
+                                <img src="images/shyawa.jpg" alt="">
+                                <span> ****50 </span>
+                            </div>
+                            <div class="coupon-bottom-part">
+                                <h3>Bumper Coupon</h3>
+                                <p>Flat Rs.50 Off on Rs.749 Order</p>
+                            <div class="show-coupons-button">
+                                <span class="show-coupons">Show Coupons</span>
+                            </div>
+                            </div>
+
+                        </div>
+                        <div class="Coupon-first">
+                            <div class="coupon-top-part">
+                                <img src="images/shyawa.jpg" alt="">
+                                <span> ****0 </span>
+                            </div>
+                            <div class="coupon-bottom-part">
+                                <h3>Mega Coupon</h3>
+                                <p>Purchase above Rs.999 - Get Rs.100/- Instant Discount</p>
+                            <div class="show-coupons-button">
+                                <span class="show-coupons">Show Coupons</span>
+                            </div>
+                            </div>
+
+                        </div>
+                        <div class="Coupon-first">
+                            <div class="coupon-top-part">
+                                <img src="images/xy.jpg" alt="">
+                                <span> ****50 </span>
+                            </div>
+                            <div class="coupon-bottom-part">
+                                <h3>Rs.150 Off</h3>
+                                <p>Rs.150 Off On Minimum Purchase Of Rs.729</p>
+                            <div class="show-coupons-button">
+                                <span class="show-coupons">Show Coupons</span>
+                            </div>
+                            </div>
+
+                        </div>
+                        <div class="Coupon-first">
+                            <div class="coupon-top-part">
+                                <img src="images/truemeds.jpg" alt="">
+                                <span> ****3 </span>
+                            </div>
+                            <div class="coupon-bottom-part">
+                                <h3>First User Coupon</h3>
+                                <p>Get 23% Off On Order Of Rs.999</p>
+                            <div class="show-coupons-button">
+                                <span class="show-coupons">Show Coupons</span>
+                            </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="featured-category-container">
+                        <div class="featured-category-heading">
+                            <h1><img class="featured-img" src="images/featured heading image.png" alt="">Featured Category</h1>
+                        </div>
+
+                        <div class="featured-images-container">
+                            <ul class="featured__lists">
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/care.jpg" alt="">
+                                        <p> Beauty & Personal Care</p>
+                                        </div>
+                                </li>
+
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/electronics.jpg" alt="">
+                                        <p>Electronics & Appliances</p>
+                                        </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/travel.jpg" alt="">
+                                        <p>Travel</p>
+                                        </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/food.jpg" alt="">
+                                        <p> Food and Grocery</p>
+                                        </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/baby.jpg" alt="">
+                                        <p> Baby Care</p>
+                                        </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/home.jpg" alt="">
+                                        <p> Home Decor & Furnishing</p>
+                                        </div>
+                                </li>
+
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/pet care.jpg" alt="">
+                                        <p> Pet Care</p>
+                                        </div>
+                                </li>
+
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/freebies.jpg" alt="">
+                                        <p> Freebies</p>
+                                        </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/miscellinious.jpg" alt="">
+                                        <p> Miscellaneous</p>
+                                        </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/hoisting software.jpg" alt="">
+                                        <p> Hoisting & Software</p>
+                                        </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/banking.jpg" alt="">
+                                        <p> Banking & Insurance</p>
+                                        </div>
+                                </li>
+                            
+                                <li>
+                                    <div class="images-featured">
+                                        <img src="images/earnextramoney.jpg" alt="">
+                                        <p> Earn Extra Money</p>
+                                        </div>
+                                </li>
+                            
+                            
+
+                               
+        
+                                
+                               
+                                                 
+                            </ul>
+                        </div>
+
+
+                        <div class="trending-coupon-wrapper">
+                            <div class="trending__coupons">
+                                <h1><img class="featured-img" src="images/featured heading image.png" alt="">News & Articles</h1>
+                            </div>
+
+                            <div class="news-articles-wrapper">
+                                <div class="first-zomato-gold">
+                                    <img src="images/gold.jpg" alt="">
+                                
+                                <div class="gold-image-content">
+                                    <h3>How to Get Zomato Gold Membership Free? 5 Latest Tricks</h3>
+                                    <div class="gold-time">04 Mar 2024
+                                    </div>
+                                    <div class="gold-read-more">Read More
+                                    </div>
+
+                                </div>
+                                </div>
+
+                               
+                                <div class="first-zomato-gold">
+                                    <img src="images/add card.jpg" alt="">
+                                
+                                <div class="gold-image-content">
+                                    <h3>How to Add Card in Flipkart? 7 Easy Steps to Follow to add card</h3>
+                                    <div class="gold-time">04 Mar 2024
+                                    </div>
+                                    <div class="gold-read-more">Read More
+                                    </div>
+
+                                </div>
+                                </div>
+                                <div class="first-zomato-gold">
+                                    <img src="images/soap.jpg" alt="">
+                                
+                                <div class="gold-image-content">
+                                    <h3>10 Best Hair Removal Soap For Women: Bye-Bye Razors & Wax</h3>
+                                    <div class="gold-time">01 Mar 2024
+                                    </div>
+                                    <div class="gold-read-more">Read More
+                                    </div>
+
+                                </div>
+                                </div>
+                                <div class="first-zomato-gold">
+                                    <img src="images/manufacturing company.jpg" alt="">
+                                
+                                <div class="gold-image-content">
+                                    <h3>7+ Best Toy Manufacturing Companies in India (2024) to sell </h3>
+                                    <div class="gold-time">04 Mar 2024
+                                    </div>
+                                    <div class="gold-read-more">Read More
+                                    </div>
+
+                                </div>
+                                </div>
+                                <div class="first-zomato-gold">
+                                    <img src="images/ajio.jpg" alt="">
+                                
+                                <div class="gold-image-content">
+                                    <h3>Ajio Upcoming Sale 2024: Get The Hottest Fashion Picks the youth</h3>
+                                    <div class="gold-time">29 Feb 2024
+                                    </div>
+                                    <div class="gold-read-more">Read More
+                                    </div>
+
+                                </div>
+                                </div>
+                                </div>
+
+                                <div class="trending__coupons">
+                                    <h1><img class="featured-img" src="images/featured heading image.png" alt="">We're In News
+                                    </h1>
+                                </div>
+                                <div class="big__image">
+                                <img src="images/in news.png" alt="">
+                            </div>
+                        </div>
+                 </div>            
+                
+               </div>
+               </div>
+               </div>
+               </div>
+
+               <div class="footer__wrapper">
+                <div class="subscribe">
+                    <div class="subscribe-content"> 
+                        <h2>Subscribe Now</h2> 
+                        <h3>Get Best Deals On Internet Deliverd Right In Your Inbox</h3> </div>
+
+                        <div class="form-wrap"> 
+                            <form method="post" > 
+                                <input type="email"  placeholder="Enter Your Email Id"> <span style="z-index: unset;"></span> 
+                                <input  class="btn"  type="submit" value="Subscribe"> </form> 
+                            </div>
+
+                            <div class="subscribe-content-small"> 
+                                <p>We value your privacy &amp; assure you that there will be no spams from us in your inbox. By Subscribing with us, you will receive only 1 mail per day. Subscribe now &amp; never miss an offer again.</p> 
+                                 </div>
+                                </div>
+                                
+                <div class="ranking">
+                    <ul>
+                        <li>
+                            <p>
+                                <img src="images/newsletter.png" alt="">
+                                <label>Newsletter</label>
+                                <span>5,00,000 People who have already subscribed special newsletter</span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <img src="images/eye.png" alt="">
+                                <label>Page View </label>
+                                <span>80 millions Page views we receive every year
+                                </span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <img src="images/ranking.png" alt="">
+                                <label>Ranking</label>
+                                <span>Top 200+ We are among top 200 sites in india
+                                </span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <img src="images/merchants.png" alt="">
+                                <label>Merchants</label>
+                                <span>Top 200 Merchants who are promoting their products
+                                </span>
+                            </p>
+                        </li>
+
+                        <li>
+                            <p>
+                                <img src="images/fans.png" alt="">
+                                <label>Fans On Facebook</label>
+                                <span>2,00,000+ Fans on Facebook</span>
+                            </p>
+                        </li>
+                    </ul>
+
+
+                </div>
+                    <div class="footer__container">
+                <div class="about__footer">
+
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#"> Festival Deals</a></li>
+                            <li><a href="#">Top Stores</a></li>
+                            <li><a href="#">Need Help</a></li>
+                            <li><a href="#">Download App</a></li>
+                        </ul>
+                    
+                        <div class="footer-listing-wrapper">
+                        
+                    <div class="first-part-footer">
+                        <ul>
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Advertising Opportunities</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">News & Articles</a></li>
+                            <li><a href="#">Testimonial</a></li>
+                            <li><a href="#">Hindi Articles</a></li>
+                            <li><a href="#">WebStory</a></li>
+                            <li><a href="#">Refer and Earn</a></li>
+                            <li><a href="#">Campus Ambassador Program</a></li>
+                            
+                        </ul>
+                        </div>
+
+                        <div class="first-part-footer">
+                        <ul>
+                            <li><a href="#">Christmas Offers</a></li>
+                            <li><a href="#">New Year Offers</a></li>
+                            <li><a href="#">Republic Day Offers</a></li>
+                            <li><a href="#">Valentine's Day Offers </a></li>
+                            <li><a href="#">Father's Day Offers</a></li>
+                            <li><a href="#">Akshaya Tritiya Offers</a></li>
+                            <li><a href="#">Diwali Offers</a></li>
+                            <li><a href="#">Holi Offers</a></li>
+                            <li><a href="#">Rakhi Offers </a></li>
+                            <li><a href="#">Independence Day Offers</a></li>
+                            <li><a href="#">Dussehra Offers</a></li>
+                            <li><a href="#">Amazon Great Indian Festive Sale</a></li>
+                            <li><a href="#">Flipkart Big Billion Day Sale</a></li>
+                        </ul>
+                        </div>
+
+                        <div class="first-part-footer">
+                            <ul>
+                                <li><a href="#">About Us</a></li>
+                                <li><a href="#">flipkart</a></li>
+                                <li><a href="#">cromaexclusive</a></li>
+                                <li><a href="#">befikray</a></li>
+                                <li><a href="#">pepperfry</a></li>
+                                <li><a href="#">shyaway</a></li>
+                                <li><a href="#">myntraexclusive</a></li>
+                                <li><a href="#">asaya</a></li>
+                                <li><a href="#">smytten</a></li>
+                                <li><a href="#">kindlife</a></li>
+                                <li><a href="#">swiggy</a></li>
+                                <li><a href="#">vaaree</a></li>
+                                <li><a href="#">pueronline</a></li>
+                                <li><a href="#">orangehealth</a></li>
+                                <li><a href="#">ajio</a></li>
+                            </ul>
+                            </div>
+
+                            <div class="first-part-footer">
+                                <ul>
+                                    <li><a href="#">Getting Started</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">FAQ's</a></li>
+                                    <li><a href="#">Press</a></li>
+                                    <li><a href="#">Feed</a></li>
+                                </ul>
+                            </div>
+                            </div>
+                            
+
+                            <div class="follow-us-container"> 
+                                <div class="google-image">
+
+                                <span><img src="images/googleimage.png" alt=""></span>
+                                <span class="or">or</span>
+                                <span class="form">
+                            <input type="text" placeholder="Enter Mobile Number" >
+                            <button><img src="images/arrow.png"></button></span>
+                        </div>
+
+                            <div class="follow-us-icons">
+                                <label>Follow Us</label>
+                                <div class="icons">
+                                <ul>
+                                    <li><a href="#"><img src="images/facebook.png"></a></li>
+                                    <li><a href="#"><img src="images/twitter.png"></a></li>
+                                    <li><a href="#"><img src="images/telegram.png"></a></li> 
+                                    <li><a href="#"><img src="images/pin.png"></a></li>
+                                    <li><a href="#"><img src="images/linkedin.png"></a></li>
+                                    <li><a href="#"><img src="images/youtube.png"></a></li>
+                                    <li><a href="#"><img src="images/insta.png"></a></li> 
+                                </ul>
+                                </div>
+                                <p>Scan This QR Code to get our App</p>
+                                <img class="scanner" src="images/scanner.png">
+
+                            </div>
+
+                            </div>
+                        </div>
+
+                        
+    
+                    </div>
+                    
+    
+
+                    
+
+                    
+                
+    
+
+               </div>
+               </div>
+               
+
+               <div class="why-waste-money">
+                <div class="waste-money-heading">
+                    <div class="waste__head">
+                             <h2># Why Waste Money</h2>
+                             <label>When you can get things for free</label>
+                    
+                    <div class="all__content">
+                        <h2>Top Online Shopping offers and Latest Promo Codes in India</h2>
+                        <p> Welcome to the world of unbeatable deals, get up to 90% off on fashion, food, electronics, appliances, groceries, kids products and more. FreeKaaMaal is completely free online community where you can discover the latest deals, coupons, offers, and freebies. The website helps you make the best online shopping decisions. Check the top online shopping offers every day to pocket great savings on all your purchases. </p>
+                        <h2>Best Deals Online to Shop At Lowest Prices</h2>
+                        <p>We research the price history of products to post top deals on our platform. Our deals are selected from the pool of biggest discounts that have been examined by deal editors. Only the best deals are picked and displayed on FreeKaaMaal. Our team of deals hunters is passionate about finding and sharing good deals.</p>
+                        <h2>Latest offers on Fashion, Electronics, Food, Travel and more </h2>
+                        <p>Since 2010, FreeKaaMaal.com is a leader in the world of deals, discounts, and promo codes. At FreeKaaMaal, our goal is to create an ultimate shopping destination, we bring every type of imaginable offer. Every day we bring the latest coupon codes, product deals, and other offers from across the web. No matter what you're buying you should never pay the full price. Find deals on every category imaginable and our experts make sure they work. Whether you're looking to find a good deal on a smartphone or wondering how to save on clothes and groceries, you can find savings solutions on FreeKaaMaal.com. Grab the best offer of the day to relish the joy of online shopping with us.</p>
+                        <h2>Top Online Shopping Discounts in India</h2>
+                        <p> Our talented team of web developers, deal hunters, editors and more, work hard to ensure a great experience for you. The online realm of deals, coupon codes, and discounts is vast. Our team personally reviews more than 2,000 online retailers every day to bring the most thrilling deals across the internet. Every deal is checked before it is posted to our site. Our dedication to display only the top online shopping offers in India makes FreeKaaMaal one of the reliable sites. One complete source to find every best deal online, no need to waste your time searching for discounts. </p>
+                        <h2>Best Deals Online For Maximum Savings Today</h2>
+                        <p> We rely on innovative technology to track down the biggest bargains as quickly as possible. We work in collaboration with top stores to share their great offers. The site is updated throughout the day to help shoppers save money and time. We want your online shopping experience to simple, fun, and full of savings. Our website is designed to make your saving money effortless. Maximize your savings every time with FreeKaaMaal.com. </p>
+                        <h2>Today Online offers of Popular Stores In India </h2>
+                        <p> FreeKaaMaal has partnered with top online stores, so whether you want to buy furniture or shop for latest fashion the online offers and coupons from all the leading stores are available here. <a href="#">Latest coupons</a>  and deals from famous stores like Myntra, Jabong, Tatacliq, Amazon, shopclues, flipkart, ajio, pepperfry, paytm, ebay, zomato, faballey, faasos, lenskart, Myvishal etc can be easily grabbed from here. Our wide collection of partners cover top categories fashion, food, electronics, mobile recharge, travel, health care, baby care, home appliances etc. </p>
+                        <h2>How to Grab Online Free Stuff India?</h2>
+                        <p> The moment you visit FreeKaaMaal.com, a bundle of fresh deals are available at your service. These are the best online deals available in India handpicked by the team, these come with a specific time period. So, you have to use them before they get exhausted. The best part of FreeKaaMaal is that as the name suggests you can get things even for free. Freebies India will let you get things at prices as low as 0 rupees. There are options like 100% cashback, free health check-up, free samples in India, reward on signup, products at rs. 1, free first ride etc. that can be grabbed under freebies section. Some real useful stuff for free in India is available to grab in a few clicks with FreeKaaMaal. Visit the <a href="#">Free Stuff Deals</a> Section for all the online free stuff in India. <i>“Why waste money when you can get things for free”.</i></p>
+                        <h3>Loot Deals - Up to 100% Discount on Products</h3>
+                        <p> The real joy of online shopping is when you get things for free and we do this by bringing up to 100 percent off deals. Products at such big discounts that they are almost free for you. Grab <a href="#">loot offers</a> before they expire to enjoy real shopping bonanza. Also get products for as low as Rs 1 that take your shopping experience to the next level. We bring the ongoing loot deals of Free Shopping sites in India, </p>
+                        <h3>Free Samples in India</h3>
+                        <p>Your shopping experience gets even better with free samples of products. We provide all the information about free sample campaigns in India. You can easily stay updated with the ongoing campaigns to grab amazing freebies. India Online Free stuff is only a click away with FreeKaaMaal. Grab some real useful stuff for free that too in a matter of few clicks. </p>
+                        <h3>Verified Promo Codes for Fashion, Grocery, Recharge, Food and more</h3>
+                        <p>Every day we bring the latest coupon codes, product deals, and other offers from across the web. Head to our coupons section to explore latest promo codes of more than 500 stores. Top coupons of leading online retailers and verified in this section of website. </p>
+                        <p>We've more than 80 categories on FreeKaaMaal.com, ranging from fashion to electronics to food to travel. When you spot an offer you're excited about, you can redeem it in one click. The offer will auto-activate once you click "Shop Now" button. </p>
+                        <h3>How to Avail Coupons from FreeKaaMaal</h3>
+                        <p>Coupons come with a specific discount amount that helps you save extra money. You can search for a coupon code across any category or online store. Once you have searched for your desired coupon you can copy the code by clicking on GET CODE/show coupons. After this, you only have to paste the coupon code while checking out from a store. This will give you instant discount on your shopping. You can see the terms and conditions of the coupon at FreeKaaMaal to check its validity. </p>
+                        <h3>Best Price Deals on Online Shopping India</h3>
+                        <p>Catch the latest deals in real-time which you can redeem right away. Choose from the limited time promotions, end of season sales, online shopping sales and other major price cuts. The deals are labeled with images, pricing, and discounts to let you know about the products and how much you're saving. We hunt the latest deals of online shopping in India to bring on our site in real time. </p>
+                        <p>From deals and coupons to unbelievable freebies we present every type of saving you can ever imagine. Discover online offers in India that are irresistible and simply the best prices on listed products. </p>
+                        <h3>Cashback offers On Online Shopping India </h3>
+                        <p>Introducing <a href="#">100% Cashback</a>, shop from select online stores to earn cashback at FreeKaaMaal. Get exclusive offers of cashback on categories like fashion, food, mobile recharge and more. Just follow some simple steps for assured up to 100% cashback on your purchase.</p>
+                        <h3>Best Holi, Diwali, New Year Shopping Offers</h3>
+                        <p> We all love to shop during the festivals and the online stores come up with special discounts during this time to help you get the better prices. You don't need to visit every single site to look for great offers as during these times the team work day and night to ensure that you don’t miss a good deal across online stores. Whether it is Diwali, Holi, Rakhi, Dussehra, Republic day, independence day or New year with FreeKaaMaal.com you will stay notified on all great bargains. You just visit the festive page and you can save while shopping for festivals. </p>
+                        <h3>Deal of the day - Flipkart, Amazon, Myntra, Shopclues, Paytm</h3>
+                        <p><a href="#">Deal of the day</a> section is filled with lightning deals that are updated on a daily basis. Find best deals on online shopping today to shop at the lowest prices. These are the fresh deals that come with a limited time period. Some of them can even let you avail the product at no cost. With this section, you don’t have to go through different websites to look for the best offers all these are handpicked by the deal hunters who have already gone through the search process. This makes your finding task easy as you get to save your money as well as time. We bring the best deals for today from leading stores like Amazon, Flipkart, Myntra, Shopclues, Paytm, Tata CLiQ, Jabong, etc. </p>
+                        <h3>Hot Deals on Online Shopping Today</h3>
+                        <p>In case you have missed a good deal you can still browse the best of the month, and best of the week section. These sections would help you grab the discounts that you have missed out in the past. If you want to get today’s best online shopping deals, check the hot deals section of FreeKaaMaal. So, you can always find top online offers to delight your mood. Before going ahead with your purchase, check the best deals on online shopping today for guaranteed savings. </p>
+                        <h3>Best Offers on Amazon, Flipkart, Myntra, Jabong Etc </h3>
+                        <p>FreeKaaMaal is dedicated to bring the best available coupons and discounts to its users. It is India’s number 1 bargain hunting destination where you get to save a lot while making your purchase. It provides a comprehensive list of lightning deals, discounts, hot deals, loot offers, freebies and so much more across top e-commerce giants. Team FreeKaaMaal works hard to bring the best discounts from top online shopping sites like Amazon, Myntra, Flipkart, shopclues, pepperfry, Bata, Expedia, MakeMyTrip, BookMyShow etc. With the amazing discounts available on this site, you don’t have to worry about the rising prices and expenses and you can get free stuff in India. </p>
+                        <h3>Best Offer of the Day on Fashion, Mobiles and more </h3>
+                        <p>Here you can select your desired item from a different variety of products. So, whether you want to buy a mobile, laptop, electronics, footwear, beauty items, food, customised products, computer accessories, grocery, home decor, sunglasses, stationery, kitchen appliances, laptops, fashion apparels, or cameras, with this section you get to avail special discount on everything. So before you begin with your online shopping just go through the category of your choice and get the best price for your product. Whatever you want to purchase, grab the lowest prices ever with offers of the day. </p>
+                        <h3>Best Offers For Today Online </h3>
+                        <p>The newsletter of the website includes of all the latest online shopping offers in India. Grab the best offers of the day across categories like fashion, electronics, food, mobile recharge, travel etc. When you subscribe to FreeKaaMaal newsletter, the information regarding the offer is sent to you on a regular basis in the form of an email. There are already so many people who have subscribed to the FreeKaaMaal newsletter and availing numerous benefits. </p>
+                        <h3>Top Shopping Deals and Coupons on Your Mobile </h3>
+                        <p>FreeKaaMaal app is your access to deals, promo codes, and freebies right on your mobile phone. Our Android App is there to offer you a smooth on the go shopping experience full of savings. The app is designed to make the customer’s shopping experience easier. Keep yourself notified with the best deals on online shopping by downloading our app. This app is available for download from Google play store, free of cost. The app has many special features like the one with which you can see the number of people currently watching a bargain. This will help you make better shopping decisions. </p>
+                        <h3>Online Shopping With Best Discounts in India</h3>
+                        <p>Online shopping is a welcome change in the last few years, we promise to make this experience smarter for you always with the handpicked deals across categories. Check the always updated deals, coupons, and freebies on FreeKaaMaal to shop at the lowest prices. </p>
+                        <p>A quarter million members on our platform post and discuss loot deals present on the web. FreeKaaMaal Members "The Deal Hunters" who post the deals get rewards for their effort. They share and post offers, coupons, hot deals, discounts coupons &amp; more. FreeKaaMaal members earn GVs for their contribution to the site. The points that they receive can be redeemed to shop online, mobile recharge, etc. Together we stand as a community of like-minded 2,50,000+ members. </p>
+                        <p>We are, as we always were, India’s No.1 Bargain-Hunting Website with over 5 million visits/months. We have a ‘more than’ dedicated team which acts like an eagle hunting the best deals and offers present online. With the latest updated deals, you are guaranteed to get the best discounts on shopping. </p>
+                    </div>
+               </div>
+               <div class="copyright__container">
+                <p> Copyright 2010-2022. FreeKaaMaal.com. All Rights Reserved. All content, trademarks and logos are copyright of their respective owners.
+                    Disclaimer: FreeKaaMaal.com is community platform where our users find and submit deals from various website across the world, we do not guarantee, approve or endorse the information or products available at these sites, nor does a link indicate any association with or endorsement by the linked site to FreeKaaMaal.com. Readers are requested to be cautious while shopping at newly launched and non-trusted e-commerce sites. </p> 
+                
+                <p class="text-center"><img src="images/copyright.jpg" alt=""></p>
+
+               </div>
+               </div>
+               
+            </div>
+                
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+</body>
+
+</html>
